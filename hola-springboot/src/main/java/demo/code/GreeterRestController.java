@@ -19,7 +19,7 @@ public class GreeterRestController {
 
     @RequestMapping(value = "/greeting", method = RequestMethod.GET, produces = "text/plain")
     public String greeting() {
-        String backendServiceUrl = String.format("http://%s:%d/hello?greeting={greeting}", backendServiceHost, backendServicePort);
+        String backendServiceUrl = String.format("http://%s:%d/api/backend?greeting={saying}", backendServiceHost, backendServicePort);
 
         BackendDTO response  = template.getForObject(backendServiceUrl, BackendDTO.class, saying);
 
