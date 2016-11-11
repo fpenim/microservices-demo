@@ -1,0 +1,3 @@
+# configurations for our saying factory
+helloapp:
+  ${HELLOAPP_SAYING:-Guten Tag aus}
